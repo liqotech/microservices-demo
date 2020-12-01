@@ -232,6 +232,7 @@ kind: Deployment
 metadata:
   name: frontend
 spec:
+  # (palexster) This can be removed when the LiqoVK will implement kubectl port-forwarding
   selector:
     matchLabels:
       app: frontend
@@ -248,6 +249,15 @@ spec:
         runAsGroup: 1000
         runAsNonRoot: true
         runAsUser: 1000
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: type
+                operator: NotIn
+                values:
+                - virtual-node
       containers:
         - name: server
           securityContext:
