@@ -1,0 +1,45 @@
+resources:
+  - ../../release/kubernetes-manifests.yaml
+
+patches:
+  - target:
+      kind: Deployment
+      name: emailservice
+    path: nodeAffinityLocal.yaml
+  - target:
+      kind: Deployment
+      name: checkoutservice
+    path: nodeAffinityRemote.yaml
+  - target:
+      kind: Deployment
+      name: recommendationservice
+    path: nodeAffinityLocal.yaml
+  - target:
+      kind: Deployment
+      name: paymentservice
+    path: nodeAffinityRemote.yaml
+  - target:
+      kind: Deployment
+      name: productcatalogservice
+    path: nodeAffinityLocal.yaml
+  - target:
+      kind: Deployment
+      name: cartservice
+    path: nodeAffinityRemote.yaml
+  - target:
+      kind: Deployment
+      name: currencyservice
+    path: nodeAffinityLocal.yaml
+  - target:
+      kind: Deployment
+      name: shippingservice
+    path: nodeAffinityRemote.yaml
+  - target:
+      kind: Deployment
+      name: redis-cart
+    path: nodeAffinityLocal.yaml
+  - target:
+      kind: Deployment
+      name: adservice
+    path: nodeAffinityRemote.yaml
+
