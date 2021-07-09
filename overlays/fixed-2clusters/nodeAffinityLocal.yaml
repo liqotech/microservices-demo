@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: not-used # the name is not used if a target is specified in kustomization.yaml
+  labels:
+    local: true
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: liqo.io/type
+                operator: NotIn
+                values:
+                - virtual-node

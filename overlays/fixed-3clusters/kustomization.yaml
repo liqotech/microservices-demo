@@ -1,0 +1,48 @@
+resources:
+  - ../../release/kubernetes-manifests.yaml
+
+patches:
+  - target: # Set label local: true to every pod, then patch to false for offloaded pods.
+      kind: Deployment
+    path: nodeAffinityLocal.yaml
+  - target:
+      kind: Deployment
+      name: emailservice
+    path: nodeAffinityClusterA.yaml
+  - target:
+      kind: Deployment
+      name: checkoutservice
+    path: nodeAffinityClusterC.yaml
+  - target:
+      kind: Deployment
+      name: recommendationservice
+    path: nodeAffinityClusterA.yaml
+  - target:
+      kind: Deployment
+      name: paymentservice
+    path: nodeAffinityClusterC.yaml
+  - target:
+      kind: Deployment
+      name: productcatalogservice
+    path: nodeAffinityClusterA.yaml
+  - target:
+      kind: Deployment
+      name: cartservice
+    path: nodeAffinityClusterC.yaml
+  - target:
+      kind: Deployment
+      name: currencyservice
+    path: nodeAffinityClusterA.yaml
+  - target:
+      kind: Deployment
+      name: shippingservice
+    path: nodeAffinityClusterC.yaml
+  - target:
+      kind: Deployment
+      name: redis-cart
+    path: nodeAffinityClusterA.yaml
+  - target:
+      kind: Deployment
+      name: adservice
+    path: nodeAffinityClusterC.yaml
+
