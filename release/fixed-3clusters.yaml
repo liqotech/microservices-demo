@@ -368,7 +368,7 @@ spec:
               - key: region
                 operator: In
                 values:
-                - A
+                - B
       containers:
       - env:
         - name: PORT
@@ -427,7 +427,7 @@ spec:
               - key: region
                 operator: In
                 values:
-                - A
+                - B
       containers:
       - env:
         - name: PORT
@@ -615,7 +615,7 @@ spec:
               - key: region
                 operator: In
                 values:
-                - A
+                - B
       containers:
       - env:
         - name: PORT
@@ -673,7 +673,7 @@ spec:
               - key: region
                 operator: In
                 values:
-                - A
+                - B
       containers:
       - env:
         - name: PORT
@@ -735,7 +735,7 @@ spec:
               - key: region
                 operator: In
                 values:
-                - A
+                - B
       containers:
       - image: redis:alpine
         livenessProbe:
