@@ -186,7 +186,7 @@ spec:
           value: "1"
         - name: DISABLE_TRACING
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/adservice:v0.2.0
+        image: gcr.io/google-samples/microservices-demo/adservice:v0.3.4
         livenessProbe:
           exec:
             command:
@@ -245,7 +245,7 @@ spec:
           value: "7070"
         - name: LISTEN_ADDR
           value: 0.0.0.0
-        image: gcr.io/google-samples/microservices-demo/cartservice:v0.2.0
+        image: gcr.io/google-samples/microservices-demo/cartservice:v0.3.4
         livenessProbe:
           exec:
             command:
@@ -319,7 +319,7 @@ spec:
           value: "1"
         - name: DISABLE_PROFILER
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/checkoutservice:v0.2.0
+        image: gcr.io/google-samples/microservices-demo/checkoutservice:v0.3.4
         livenessProbe:
           exec:
             command:
@@ -375,7 +375,7 @@ spec:
           value: "1"
         - name: DISABLE_DEBUGGER
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/currencyservice:v0.2.0
+        image: gcr.io/google-samples/microservices-demo/currencyservice:v0.3.4
         livenessProbe:
           exec:
             command:
@@ -431,7 +431,7 @@ spec:
           value: "1"
         - name: DISABLE_PROFILER
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/emailservice:v0.2.0
+        image: gcr.io/google-samples/microservices-demo/emailservice:v0.3.4
         livenessProbe:
           exec:
             command:
@@ -498,13 +498,7 @@ spec:
           value: checkoutservice:5050
         - name: AD_SERVICE_ADDR
           value: adservice:9555
-        - name: ENV_PLATFORM
-          value: gcp
-        - name: DISABLE_TRACING
-          value: "1"
-        - name: DISABLE_PROFILER
-          value: "1"
-        image: gcr.io/google-samples/microservices-demo/frontend:v0.2.0
+        image: gcr.io/google-samples/microservices-demo/frontend:v0.3.4
         livenessProbe:
           httpGet:
             httpHeaders:
@@ -560,7 +554,7 @@ spec:
       - env:
         - name: PORT
           value: "50051"
-        image: gcr.io/google-samples/microservices-demo/paymentservice:v0.2.0
+        image: gcr.io/google-samples/microservices-demo/paymentservice:v0.3.4
         livenessProbe:
           exec:
             command:
@@ -611,13 +605,7 @@ spec:
       - env:
         - name: PORT
           value: "3550"
-        - name: DISABLE_STATS
-          value: "1"
-        - name: DISABLE_TRACING
-          value: "1"
-        - name: DISABLE_PROFILER
-          value: "1"
-        image: gcr.io/google-samples/microservices-demo/productcatalogservice:v0.2.0
+        image: gcr.io/google-samples/microservices-demo/productcatalogservice:v0.3.4
         livenessProbe:
           exec:
             command:
@@ -676,7 +664,7 @@ spec:
           value: "1"
         - name: DISABLE_DEBUGGER
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/recommendationservice:v0.2.0
+        image: gcr.io/google-samples/microservices-demo/recommendationservice:v0.3.4
         livenessProbe:
           exec:
             command:
@@ -786,7 +774,7 @@ spec:
           value: "1"
         - name: DISABLE_PROFILER
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/shippingservice:v0.2.0
+        image: gcr.io/google-samples/microservices-demo/shippingservice:v0.3.4
         livenessProbe:
           exec:
             command:
