@@ -4,7 +4,7 @@ metadata:
   name: not-used # the name is not used if a target is specified in kustomization.yaml
   labels: 
     local: false
-    region: A
+    region: B
 spec:
   template:
     spec:
@@ -16,4 +16,4 @@ spec:
               - key: region
                 operator: In
                 values:
-                - A
+                - B
