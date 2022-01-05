@@ -562,6 +562,8 @@ spec:
       - env:
         - name: PORT
           value: "50051"
+        - name: DISABLE_PROFILER
+          value: "1"
         image: gcr.io/google-samples/microservices-demo/paymentservice:v0.3.4
         livenessProbe:
           exec:
