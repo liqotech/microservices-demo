@@ -523,3 +523,7 @@ func stringinSlice(slice []string, val string) bool {
 	}
 	return false
 }
+
+func getDeploymentDetails(httpRequest *http.Request) map[string]string {
+	return map[string]string{}
+}
