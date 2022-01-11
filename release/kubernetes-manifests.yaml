@@ -225,7 +225,7 @@ spec:
                 - virtual-node
       containers:
         - name: server
-          image: gcr.io/google-samples/microservices-demo/frontend:v0.3.4
+          image: liqo/frontend-ci:v0.3.4
           ports:
           - containerPort: 8080
           readinessProbe:
@@ -380,12 +380,12 @@ spec:
         env:
         - name: PORT
           value: "3550"
-        # - name: DISABLE_STATS
-        #   value: "1"
-        # - name: DISABLE_TRACING
-        #   value: "1"
-        # - name: DISABLE_PROFILER
-        #   value: "1"
+        - name: DISABLE_STATS
+          value: "1"
+        - name: DISABLE_TRACING
+          value: "1"
+        - name: DISABLE_PROFILER
+          value: "1"
         # - name: JAEGER_SERVICE_ADDR
         #   value: "jaeger-collector:14268"
         readinessProbe:
